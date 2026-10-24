@@ -41,9 +41,9 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'APPNAME',
-        short_name: 'APPNAME',
-        description: 'Explore APPNAME.',
+        name: 'music-share',
+        short_name: 'music-share',
+        description: 'Explore music-share.',
         start_url: '/',
         scope: '/',
         display: 'standalone',

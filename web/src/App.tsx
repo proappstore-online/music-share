@@ -1,7 +1,7 @@
 import { initPro, AppShell, PageHeader, useAuth, type NavItem } from '@proappstore/sdk'
 
 const app = initPro({
-  appId: 'APPNAME',
+  appId: 'music-share',
   // Hosted apps use the host-owned HttpOnly session, never a browser-stored token.
   authMode: 'platform-cookie',
   // #393: the deploy's commit names this build in every crash report, so the owner
@@ -16,13 +16,13 @@ const app = initPro({
  * Add a screen here and in <Screens />; never put navigation on a page.
  */
 const NAV: NavItem[] = [
-  { label: 'Home', href: '/', title: 'APPNAME' },
-  { label: 'About', href: '/about', title: 'About — APPNAME' },
+  { label: 'Home', href: '/', title: 'music-share' },
+  { label: 'About', href: '/about', title: 'About — music-share' },
 ]
 
 export default function App() {
   return (
-    <AppShell app={app} appName="APPNAME" nav={NAV} branding="app">
+    <AppShell app={app} appName="music-share" nav={NAV} branding="app">
       <Screens />
     </AppShell>
   )
@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <div className="mx-auto w-full max-w-3xl px-6 py-10">
-      <PageHeader title="APPNAME" description={`Signed in as ${user?.name ?? 'you'}.`} />
+      <PageHeader title="music-share" description={`Signed in as ${user?.name ?? 'you'}.`} />
       <p className="text-sm text-[var(--muted)]">
         Edit <code className="rounded bg-[var(--line)] px-1.5 py-0.5 text-xs">web/src/App.tsx</code> to start building.
         Each screen starts with a <code className="rounded bg-[var(--line)] px-1.5 py-0.5 text-xs">PageHeader</code> and is listed in <code className="rounded bg-[var(--line)] px-1.5 py-0.5 text-xs">NAV</code>.
@@ -53,7 +53,7 @@ function Home() {
 function About() {
   return (
     <div className="mx-auto w-full max-w-3xl px-6 py-10">
-      <PageHeader title="About" description="What APPNAME is for." />
+      <PageHeader title="About" description="What music-share is for." />
       <p className="text-sm text-[var(--muted)]">
         Replace this screen with your own. The error boundary, loading fallback, toasts
         (<code className="rounded bg-[var(--line)] px-1.5 py-0.5 text-xs">useToast</code>), offline banner and skip link come with AppShell.
